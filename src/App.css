@@ -1,33 +1,95 @@
 .App {
-  text-align: center;
+  color: #2E2951;
+  height: 100vh;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
+/* ---- Book Search ------*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.book-search-container {
+  /* display: flex; */
+  /* flex-direction: column; */
+  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+  /* display: inline-block; */
+  background-color: #2E2951;
+  color:#b79933;
+  height: 100vh;
+}
+
+.book-search-container h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 80px;
+}
+
+.book-search-container input {
+  background-color: #2E2951;
+  border: 1px solid #b79933;
+  color: #b79933;
+  outline: none;
+  padding-left: 10px;
+  border-radius: 100px;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: 'Fira Sans', sans-serif;
+} 
+
+.book-search-container button {
+  background-color: #9f33b6;
+  border: 1px solid #9f33b6;
+  border-radius: 100px;
+  font-size: 20px;
+  height: 30px;
+  margin: 20px 0;
+  font-family: 'Fira Sans', sans-serif;
+  display: inline-block;
+  width: 200px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* ---- Book List ------*/
+
+.book-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 100vh;
+  overflow-y: auto;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+  /* background-color: #e7e1e341; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.book-container {
+  width: 48%;
+  display: inline-block;
+  margin: 1%;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ebdfe0a5;
+  box-shadow: 1px 1px 5px #a39f9f3b;
+}
+
+.book-container h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  
+}
+
+.book-container button {
+  background-color: #dacccd;
+  color: white;
+  font-size: 14px;
+  border: 1px solid #dacccd;
+  border-radius: 100px;
+  width: 100px;
 }
