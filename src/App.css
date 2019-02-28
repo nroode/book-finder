@@ -13,46 +13,66 @@
   /* display: flex; */
   /* flex-direction: column; */
   width: 50%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 20px;
   /* display: inline-block; */
   background-color: #2E2951;
-  color:#b79933;
+  color:#d4ab23;
   height: 100vh;
+}
+
+.book-bk-cover {
+  /* width: 100%; */
+  background-color: #2E2951;
+  
 }
 
 .book-search-container h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 80px;
+
+  /* color: #b79933;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0); 
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #b79933; */
 }
 
 .book-search-container input {
   background-color: #2E2951;
   border: 1px solid #b79933;
-  color: #b79933;
+  /* color: rgb(94, 72, 236); */
+  color: #fcca27;
+
   outline: none;
-  padding-left: 10px;
+  padding-left: 20px;
   border-radius: 100px;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 28px;
+  line-height: 40px;
   font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+  display: block;
+  width: 100%;
 } 
 
+.book-search-container input::placeholder {
+color: rgb(77, 68, 134);
+}
+
 .book-search-container button {
-  background-color: #9f33b6;
-  border: 1px solid #9f33b6;
-  border-radius: 100px;
   font-size: 20px;
   height: 30px;
   margin: 20px 0;
   font-family: 'Fira Sans', sans-serif;
   display: inline-block;
   width: 200px;
-  color: white;
+
 }
+
+
 
 /* ---- Book List ------*/
 
@@ -67,29 +87,88 @@
   /* background-color: #e7e1e341; */
 }
 
-
+/* .list-bk-cover {
+  width: 100%;
+} */
 
 .book-container {
   width: 48%;
-  display: inline-block;
+  display: flex;
   margin: 1%;
   padding: 10px;
+  /* background: linear-gradient(to bottom right, white, 85%, #9e33b622); */
   background-color: white;
   border: 1px solid #ebdfe0a5;
   box-shadow: 1px 1px 5px #a39f9f3b;
+  height: 200px;
+}
+
+.book-container-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-container img {
+  margin-right: 10px;
+  box-shadow: 1px 1px 5px #6d6b6bd6;
+  width: 110px;
 }
 
 .book-container h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 24px;
+  font-size: 19px;
+  padding: 5px 0;
   
 }
 
+.book-title-main {
+  max-height: 85px;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+
+   /* display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 3; 
+   line-height: 1;       
+   max-height: 100px; */
+  /* max-height: 100px; */
+}
+
+.book-container h3, .book-container p {
+  font-size: 13px;
+  font-weight: 300;
+}
+
 .book-container button {
-  background-color: #dacccd;
-  color: white;
-  font-size: 14px;
-  border: 1px solid #dacccd;
-  border-radius: 100px;
+  font-size: 12px;
+  padding: 3px;
   width: 100px;
+  margin-top: 10px;
+}
+
+/* ----- global ----- */
+
+button {
+  border: 1px solid #9f33b6;
+  background-color: #9f33b6;
+  border-radius: 100px;
+  color: white;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+button:hover {
+  background-color: #d725ff;
+  border: 1px solid #d725ff;
+  cursor: pointer;
+}
+
+.label {
+/* border-bottom: 1px solid #fcca27; */
+margin-right: 5px;
+margin-top: 2px;
+font-weight: 400;
+/* background-color: #fcca27; */
 }
