@@ -68,15 +68,7 @@ class App extends Component {
                 <div>
                   <div className="book-title-main"><h1>{book.volumeInfo.title}</h1></div>
                   <h3 className="book-authors"><span className="label">By:</span>
-                        {book.volumeInfo.authors ? (
-                      book.volumeInfo.authors.map(author => {
-                        return (
-                          ((book.volumeInfo.authors.indexOf(author)) === (book.volumeInfo.authors.length - 2)) ?
-                            (author + ' & ') : (author)
-                        )
-                      })
-                        ) : "n/a"
-                    }
+                        {book.volumeInfo.authors ? book.volumeInfo.authors.join(' & ') : "n/a" }
                   </h3>
                   <p className="book-publisher"><span className="label">Publisher:</span> {book.volumeInfo.publisher ? book.volumeInfo.publisher : "n/a"}</p>
                 </div>
@@ -94,7 +86,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className={this.state.classStyle ? `App stretch` : `App`}>  
         <Search
           handleQuerySubmit={this.handleQuerySubmit}
           handleChange={this.handleChange}
@@ -105,7 +97,7 @@ class App extends Component {
         <BookResult
           query={this.state.query}
           bookList={this.state.bookList}
-
+          classStyle={this.state.classStyle}
         />
       </div>
     );
@@ -113,3 +105,16 @@ class App extends Component {
 }
 
 export default App;
+
+
+// <h3 className="book-authors"><span className="label">By:</span>
+//                         {book.volumeInfo.authors ? (
+//                       book.volumeInfo.authors.map(author => {
+//                         return (
+//                           ((book.volumeInfo.authors.indexOf(author)) === (book.volumeInfo.authors.length - 2)) ?
+//                             (author + ' & ') : (author)
+//                         )
+//                       })
+//                         ) : "n/a"
+//                     }
+//                   </h3>

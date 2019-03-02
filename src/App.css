@@ -1,3 +1,4 @@
+
 .App {
   color: #2E2951;
   height: 100vh;
@@ -5,14 +6,17 @@
   box-sizing: border-box;
   width: 100%;
   display: flex;
+  
 }
+
+
 
 /* ---- Book Search ------*/
 
 .book-search-container {
   /* display: flex; */
   /* flex-direction: column; */
-  width: 50%;
+  /* width: 50%; */
 
   display: flex;
   flex-direction: column;
@@ -22,12 +26,29 @@
   background-color: #2E2951;
   color:#d4ab23;
   height: 100vh;
+  transition: .5s ease-out;
+  transition-property: width;
 }
 
-.book-bk-cover {
-  /* width: 100%; */
-  background-color: #2E2951;
-  
+
+.stretch {
+  width: 100%;
+}
+
+.stretch input {
+  width: 100%;
+}
+
+.shrink {
+  width: 50%;
+}
+
+.shrink input {
+  width: 100%;
+}
+
+.hide {
+  width: 0%;
 }
 
 .book-search-container h1 {
@@ -54,8 +75,9 @@
   line-height: 40px;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
+  max-width: 600px;
   display: block;
-  width: 100%;
+  /* width: 100%; */
 } 
 
 .book-search-container input::placeholder {
@@ -79,12 +101,13 @@ color: rgb(77, 68, 134);
 .book-list-container {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
+  /* width: 50%; */
   height: 100vh;
   overflow-y: auto;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
   /* background-color: #e7e1e341; */
+  transition: .5s all ease-in;
 }
 
 /* .list-bk-cover {
@@ -171,4 +194,78 @@ margin-right: 5px;
 margin-top: 2px;
 font-weight: 400;
 /* background-color: #fcca27; */
+}
+
+/* ------ Media Queries ------ */
+/* 768  991  1199 */
+
+@media (max-width: 1199px) {
+  
+  .book-container {
+    width: 98%;
+  }
+
+  .book-search-container h1 {
+    line-height: .8;
+    padding-bottom: 20px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  
+  .book-container {
+    width: 48%;
+    margin: 1%;
+  }
+
+  .book-search-container {
+    width: 100%;
+    display: block;
+    height: 20vh;
+    text-align: center;
+  }
+
+  .book-search-container h1 {
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .book-search-container input {
+    font-size: 18px;
+    display: inline-block;
+    line-height: 22px;
+    /* width: 100%; */
+
+  }
+
+  .book-search-container button {
+    font-size: 14px;
+    height: 20px;
+    margin: 10px 0;
+    
+    display: inline-block;
+    width: 200px;
+    
+  }
+
+
+  .book-list-container {
+    width: 100%;
+  }
+
+  .App {
+    display: block;
+    width: 100%;
+
+  }
+  
+}
+
+@media (max-width: 575px) {
+  
+  .book-container {
+    width: 98%;
+  }
 }

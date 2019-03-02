@@ -9,7 +9,7 @@ class Search extends Component {
 
     render() {
         return(
-            <div className={this.props.classStyle ? `book-search-container book-bk-cover list-bk-cover` : `book-search-container`}>
+            <div className={this.props.classStyle ? `book-search-container stretch` : `book-search-container shrink`}>
                 <h1>Book Finder</h1>
 
                 <form onSubmit={ (e) => this.props.handleQuerySubmit(e)}>

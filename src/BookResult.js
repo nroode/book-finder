@@ -29,7 +29,7 @@ class BookResult extends Component {
     render() {
         
         return(
-            <div className="book-list-container">
+            <div className={this.props.classStyle ? `book-list-container hide` : `book-list-container shrink`}>
                 {this.props.bookList}
 
             </div>
